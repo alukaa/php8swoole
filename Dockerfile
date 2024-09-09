@@ -14,7 +14,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo $TZ > /etc/timezone && \
     echo '[PHP]\ndate.timezone = "'$TZ'"\n' > /usr/local/etc/php/conf.d/tzone.ini
 
-RUN apt-get install git
+RUN apt install git
 
 # 创建 mer_s.conf 配置文件
 RUN echo "[program:mer_s]" > /etc/supervisor/conf.d/mer_s.conf && \
